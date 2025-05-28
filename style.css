@@ -1,0 +1,361 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4; /* Consistent background across pages */
+}
+
+/* --- Navbar Styles (Common to all pages) --- */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1rem; /* Smaller base for very small screens */
+    white-space: normal; /* Allow text to wrap */
+    min-width: 150px; /* Prevent it from becoming too narrow */
+}
+
+@media (min-width: 576px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem; /* Larger font for medium and up screens */
+    }
+}
+
+.nav-link.active,
+.nav-item.active .nav-link {
+    color: #007BFF !important; /* Bootstrap's default blue for active link */
+    font-weight: bold;
+}
+
+/* --- Hero Section Styles (Common elements, background image set per page) --- */
+.hero-section {
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    padding: 60px 15px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .container {
+    width: 100%;
+    max-width: 960px;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+}
+
+.hero-section p {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Section Heading Styles (Common to content sections across pages) --- */
+.section-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0d6efd; /* Bootstrap primary blue */
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .section-heading {
+        font-size: 2.5rem;
+    }
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #0d6efd;
+    border-radius: 2px;
+}
+
+/* --- Carousel Controls (Common for any Bootstrap carousel) --- */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 0.7;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0d6efd;
+    border-radius: 50%;
+    padding: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+/* --- Form Styles (General, for consistent input/button appearance) --- */
+form .form-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+form .form-control, form .btn {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* --- General Feedback Message Styles (Common for alerts/feedback) --- */
+.feedback {
+    display: none;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+}
+
+.feedback.alert-success {
+    color: #198754; /* Bootstrap green */
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+
+/* --- Footer Styles (Common to all pages) --- */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto; /* Pushes footer to the bottom */
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    footer {
+        font-size: 1rem;
+    }
+}
+
+/*
+    ----------------------------------------------------------
+    Specific Styles for Testimonials & Reviews Page
+    (These are unique to elements only found on this page)
+    ----------------------------------------------------------
+*/
+
+/* Testimonials Carousel Cards */
+.testimonial-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    min-height: 280px; /* Ensures consistent card height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .testimonial-card p {
+        font-size: 1.1rem;
+    }
+}
+
+.testimonial-card h4 {
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .testimonial-card h4 {
+        font-size: 1.25rem;
+    }
+}
+
+.testimonial-card .fa-quote-left,
+.testimonial-card .fa-quote-right {
+    color: #0d6efd;
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+
+@media (min-width: 768px) {
+    .testimonial-card .fa-quote-left,
+    .testimonial-card .fa-quote-right {
+        font-size: 1.5rem;
+        margin: 0 10px;
+    }
+}
+
+/* FAQ Section Accordion */
+.accordion-button {
+    font-weight: bold;
+    color: #333;
+    background-color: #e9ecef;
+    font-size: 1rem;
+}
+@media (min-width: 768px) {
+    .accordion-button {
+        font-size: 1.1rem;
+    }
+}
+.accordion-button:not(.collapsed) {
+    color: #0d6efd;
+    background-color: #cfe2ff;
+}
+.accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.accordion-body {
+    color: #555;
+    background-color: #fff;
+    font-size: 0.95rem;
+}
+@media (min-width: 768px) {
+    .accordion-body {
+        font-size: 1rem;
+    }
+}
+
+/* Blog Section Cards */
+.blog-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures cards are same height in a row */
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h3 {
+    font-size: 1.25rem;
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+    .blog-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.blog-card p {
+    color: #555;
+    flex-grow: 1; /* Allows paragraph to take up available space */
+    font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+    .blog-card p {
+        font-size: 1rem;
+    }
+}
+
+.blog-card .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0d6efd;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-card .read-more:hover {
+    color: #0a58ca;
+}
+
+/* Newsletter & Review Forms */
+#newsletter, #review-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+    height: 100%; /* Make sure forms take full height of their column */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#newsletter h2, #review-form h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+@media (min-width: 768px) {
+    #newsletter h2, #review-form h2 {
+        font-size: 2rem;
+    }
+}
+
+#newsletter p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+@media (min-width: 768px) {
+    #newsletter p {
+        font-size: 1rem;
+    }
+}
+
+/* Star Rating in Review Form */
+#starRating .fa-star {
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+    #starRating .fa-star {
+        font-size: 2rem;
+    }
+}

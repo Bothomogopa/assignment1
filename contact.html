@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Us - Bothom BI & Data Analytics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <style>
+        /* --- Hero Section Styles (Specific to Contact Page) --- */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/contact%20hero.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 15px; /* Adjusted padding for smaller screens */
+            text-align: center;
+            flex-grow: 1; /* Allows hero section to grow */
+            display: flex; /* Use flexbox for vertical centering */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem; /* Responsive font size */
+            font-weight: bold;
+        }
+
+        @media (min-width: 768px) {
+            .hero-section {
+                padding: 100px 0; /* Revert to original padding for larger screens */
+            }
+            .hero-section h1 {
+                font-size: 3rem; /* Original size for larger screens */
+            }
+        }
+
+        .hero-section p {
+            font-size: 1rem; /* Responsive font size */
+        }
+
+        @media (min-width: 768px) {
+            .hero-section p {
+                font-size: 1.2rem; /* Original size for larger screens */
+            }
+        }
+
+        /* --- Main Content Container (Specific to Contact Page) --- */
+        .main-content-container {
+            max-width: 90%; /* Adjust max-width for small screens */
+            margin: 30px auto; /* Reduced margin for tighter spacing */
+            padding: 20px;
+            flex-grow: 1;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 576px) {
+            .main-content-container {
+                max-width: 550px; /* Standardize max-width on larger mobiles/small tablets */
+                padding: 30px; /* Slightly more padding */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .main-content-container {
+                max-width: 700px; /* Original max-width for tablets and desktops */
+            }
+        }
+
+        h2 {
+            margin-bottom: 20px; /* Increased margin for consistency */
+            text-align: center;
+            color: #333;
+            font-size: 1.75rem; /* Responsive font size */
+        }
+
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 2rem; /* Larger for desktop */
+            }
+        }
+
+        .main-content-container p { /* Specificity for the contact page paragraph */
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+            font-size: 0.95rem; /* Responsive font size */
+        }
+        @media (min-width: 768px) {
+            .main-content-container p {
+                font-size: 1rem; /* Larger for desktop */
+            }
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            font-size: 0.95rem; /* Responsive label size */
+        }
+
+        @media (min-width: 768px) {
+            label {
+                font-size: 1rem; /* Larger for desktop */
+            }
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 0.95rem; /* Responsive input size */
+        }
+
+        @media (min-width: 768px) {
+            input, textarea {
+                font-size: 1rem; /* Larger for desktop */
+            }
+        }
+
+        /* --- Custom Button Styling (Specific to Contact Form) --- */
+        .btn-custom-submit {
+            background-color: #007BFF; /* Primary brand color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem; /* Consistent font size */
+            cursor: pointer;
+            width: 100%; /* Full width on smaller screens */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        .btn-custom-submit:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        @media (min-width: 768px) {
+            .btn-custom-submit {
+                width: 100%; /* Keeping it 100% for now within its container */
+            }
+        }
+
+        .confirmation {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.95rem; /* Responsive font size */
+        }
+
+        @media (min-width: 768px) {
+            .confirmation {
+                font-size: 1rem; /* Larger for desktop */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">BOTHOM BI AND DATA ANALYTICS FIRM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Booking.html">Book A Session</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonials and reviews.html">Testimonials</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Get in Touch with Us</h1>
+            <p>We're here to help you unlock the potential of your data to help your business prosper.</p>
+        </div>
+    </section>
+
+    <div class="main-content-container">
+        <h2>We'd Love to Hear From You</h2>
+        <p>Have questions or want to work with us? Fill out the form below and we’ll get back to you soon.</p>
+
+        <form id="contactForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-custom-submit">Send Message</button>
+        </form>
+
+        <div class="confirmation" id="confirmationMessage">
+            Thank you for contacting us! We'll be in touch shortly.
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BOTHOM BI AND DATA ANALYTICS FIRM. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const form = document.getElementById("contactForm");
+        const confirmation = document.getElementById("confirmationMessage");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Simple validation (can be expanded)
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields.'); // Basic alert for missing fields
+                return; // Stop function if validation fails
+            }
+
+            // If validation passes, show confirmation and reset form
+            confirmation.style.display = "block";
+            form.reset();
+
+            // Optionally hide confirmation message after a few seconds
+            setTimeout(() => {
+                confirmation.style.display = "none";
+            }, 5000); // Hide after 5 seconds
+        });
+    </script>
+
+</body>
+</html>
